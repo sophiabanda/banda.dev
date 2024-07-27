@@ -1,8 +1,6 @@
 :root {
   --primary-light: rgb(46, 38, 36);
   --secondary-light: rgb(249, 237, 233);
-  --primary-dark: rgb(55, 54, 54);
-  --secondary-dark: rgb(55, 54, 54);
 }
 
 @font-face {
@@ -23,6 +21,11 @@ li {
   padding: 0;
   text-decoration: none;
   list-style-type: none;
+}
+
+a,
+a:visited {
+  color: var(--primary-light);
 }
 
 body,
@@ -67,7 +70,16 @@ section {
 
 footer {
   display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 8px;
   justify-content: center;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255)
+  );
 }
 
 /* Small Tablet Styles */
