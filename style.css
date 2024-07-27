@@ -5,6 +5,15 @@
   --secondary-dark: rgb(55, 54, 54);
 }
 
+@font-face {
+  font-family: 'Victor Mono';
+  src: url('assets/fonts/VictorMono-VariableFont_wght.ttf');
+}
+
+* {
+  font-family: 'Victor Mono';
+}
+
 body,
 p,
 a,
