@@ -1,6 +1,6 @@
 :root {
-  --primary-light: rgb(55, 54, 54);
-  --secondary-light: rgb(55, 54, 54);
+  --primary-light: rgb(46, 38, 36);
+  --secondary-light: rgb(249, 237, 233);
   --primary-dark: rgb(55, 54, 54);
   --secondary-dark: rgb(55, 54, 54);
 }
@@ -23,6 +23,46 @@ li {
   padding: 0;
   text-decoration: none;
   list-style-type: none;
+}
+
+body,
+html {
+  height: 100%;
+  background-color: var(--secondary-light);
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  border: 5px solid var(--primary-light);
+}
+
+main {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+}
+
+article {
+  text-align: center;
+  justify-content: center;
+  color: var(--secondary-light);
+}
+
+section {
+  background-color: var(--primary-light);
+  border-radius: 25px;
+  width: 250px;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
 }
 
 /* Small Tablet Styles */
