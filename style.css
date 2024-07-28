@@ -46,6 +46,7 @@ nav {
   align-items: center;
   text-align: center;
   background-color: var(--main-green);
+  text-shadow: 1px 1px 1px var(--main-navy);
 }
 
 nav h1 {
@@ -77,6 +78,8 @@ main {
 }
 
 article {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
 }
@@ -88,6 +91,23 @@ section {
   background-color: var(--main-cream);
   margin-bottom: 25px;
   padding: 10px;
+}
+
+.collapse {
+  color: var(--main-navy);
+  background-color: var(--main-cream);
+}
+
+.content {
+  /* padding: 0 18px; */
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+button {
+  border: none;
+  font-size: large;
 }
 
 /* ----------------------------------------------------------------- FOOTER */

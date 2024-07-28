@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
     <title>Banda</title>
 </head>
 
@@ -23,8 +25,8 @@
     </header>
     <main>
         <article>
-            <h4 class="collapse">About</h4>
-            <section id="about">
+            <button class="collapse">About</button>
+            <section id="about" class="content">
                 <small>
                     <p>
                         From a young age, I have always loved to take things
@@ -54,9 +56,12 @@
                     </p>
                 </small>
             </section>
-            <section>Work</section>
-            <section>Download Resume</section>
-            <section>
+            <button class="collapse">Work</button>
+            <section class="content"></section>
+            <button class="collapse">Resume</button>
+            <section class="content">Download Resume</section>
+            <button class="collapse">Contact</button>
+            <section class="content">
                 <a href="mailto:sophiabanda.dev@gmail.com">Send me an email</a>
             </section>
         </article>
