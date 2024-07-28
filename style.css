@@ -121,12 +121,16 @@ button:hover {
   background-color: var(--main-yellow);
 }
 
-#resume-content {
+.section-flex {
   display: flex;
   gap: 10px;
 }
 
-#resume-content a {
+#contact {
+  flex-direction: column;
+}
+
+article a {
   box-shadow: 2px 2px var(--main-orange);
   background-color: var(--main-yellow);
   border-radius: 5px;
