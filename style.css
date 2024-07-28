@@ -1,6 +1,9 @@
 :root {
-  --primary-text: black;
-  --secondary-text: red;
+  --main-navy: #3d405b;
+  --main-green: #81b29a;
+  --main-orange: #e07a5f;
+  --main-yellow: #f2cc8f;
+  --main-cream: #f4f1de;
 }
 
 @font-face {
@@ -25,12 +28,14 @@ li {
 
 a,
 a:visited {
-  color: var(--primary-text);
+  color: var(--main-cream);
 }
 
 body,
 html {
   height: 100%;
+  background-color: var(--main-navy);
+  color: var(--main-cream);
 }
 
 #profile-img {
@@ -43,7 +48,8 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  border: 5px solid var(--primary-text);
+  border: 5px solid var(--main-navy);
+  background-color: var(--main-green);
 }
 
 nav h1 {
@@ -74,7 +80,8 @@ article {
 }
 
 section {
-  border: 2px solid var(--primary-text);
+  border: 2px solid var(--main-orange);
+  /* background-color: var(--main-orange); */
   border-radius: 20px;
   width: 250px;
   text-align: center;
@@ -88,10 +95,7 @@ footer {
   width: 100%;
   padding: 8px;
   justify-content: center;
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255)
-  );
+  background-color: var(--main-green);
 }
 
 /* Small Tablet Styles */
