@@ -43,6 +43,7 @@ html {
 /* ----------------------------------------------------------- NAV / HEADER */
 header {
   border-bottom: 1px solid var(--main-orange);
+  margin-bottom: 50px;
 }
 
 nav {
@@ -65,6 +66,10 @@ nav img {
 #profile-img {
   max-width: 40%;
   height: auto;
+}
+
+#resume-image {
+  max-width: 10rem;
 }
 
 nav ul {
@@ -116,6 +121,17 @@ button:hover {
   background-color: var(--main-yellow);
 }
 
+#resume-content {
+  display: flex;
+  gap: 10px;
+}
+
+#resume-content a {
+  box-shadow: 2px 2px var(--main-orange);
+  background-color: var(--main-yellow);
+  border-radius: 5px;
+}
+
 /* ---------------------------------------------------------- SECTIONS */
 section {
   color: var(--main-navy);
@@ -124,7 +140,7 @@ section {
   width: 250px;
   border-radius: 5px;
   margin-top: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   box-shadow: 2px 2px var(--main-orange);
 }
 
