@@ -13,6 +13,7 @@
 
 * {
   font-family: 'Victor Mono';
+  font-weight: 700;
 }
 
 body,
@@ -39,7 +40,11 @@ html {
   scroll-behavior: smooth;
 }
 
-/* -------------------------------------------------------------- NAV / HEADER */
+/* ----------------------------------------------------------- NAV / HEADER */
+header {
+  border-bottom: 1px solid var(--main-orange);
+}
+
 nav {
   display: flex;
   justify-content: space-evenly;
@@ -83,25 +88,27 @@ article {
   justify-content: center;
 }
 
+/* -------------------------------------------------------- BUTTON HEADERS */
+
 button {
   border: none;
-  font-size: large;
   cursor: pointer;
   width: 100%;
-}
-
-.collapse {
+  font-size: 20px;
   color: var(--main-navy);
   background-color: var(--main-cream);
   width: 100%;
-  max-width: 600px;
+  padding: 18px;
+  box-shadow: 2px 2px var(--main-orange);
+  border-radius: 5px;
+}
+
+.collapse {
   margin: 0 auto;
+  max-width: 600px;
   display: block;
   outline: none;
-  padding: 18px;
   border: none;
-  font-size: 20px;
-  box-shadow: 2px 2px var(--main-orange);
 }
 
 .active,
@@ -109,11 +116,14 @@ button:hover {
   background-color: var(--main-yellow);
 }
 
+/* ---------------------------------------------------------- SECTIONS */
 section {
-  width: 250px;
-  text-align: center;
   color: var(--main-navy);
   background-color: var(--main-cream);
+  text-align: center;
+  width: 250px;
+  border-radius: 5px;
+  margin-top: 5px;
   margin-bottom: 25px;
   box-shadow: 2px 2px var(--main-orange);
 }
@@ -152,7 +162,10 @@ footer {
   padding: 8px;
   justify-content: center;
   background-color: var(--main-green);
+  border-top: 1px solid var(--main-orange);
 }
+
+/* --------------------------------------------------------- MEDIA QUERIES */
 
 /* Small Tablet Styles */
 @media screen and (min-width: 620px) {
