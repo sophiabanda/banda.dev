@@ -81,10 +81,13 @@ article {
 section {
   border: 2px solid var(--main-orange);
   /* background-color: var(--main-orange); */
-  border-radius: 20px;
   width: 250px;
   text-align: center;
 }
+
+/* section div {
+  background-color: var(--main-cream);
+} */
 
 footer {
   display: flex;
