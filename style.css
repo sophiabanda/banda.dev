@@ -70,7 +70,6 @@ nav ul {
 
 /* ----------------------------------------------------------------- MAIN */
 main {
-  display: grid;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -84,6 +83,35 @@ article {
   justify-content: center;
 }
 
+button {
+  border: none;
+  font-size: large;
+  cursor: pointer;
+  width: 100%;
+}
+
+button.collapse {
+  width: 100%;
+  max-width: 600px; /* Optional: Set a max width if needed */
+  margin: 0 auto;
+  display: block;
+}
+
+.collapse {
+  color: var(--main-navy);
+  background-color: var(--main-cream);
+  outline: none;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.active,
+.collapse:hover {
+  background-color: var(--main-yellow);
+}
+
 section {
   width: 250px;
   text-align: center;
@@ -93,21 +121,28 @@ section {
   padding: 10px;
 }
 
-.collapse {
-  color: var(--main-navy);
-  background-color: var(--main-cream);
-}
-
 .content {
-  /* padding: 0 18px; */
   display: none;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  height: 0;
+  transition: height 0.3s ease-out;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-button {
-  border: none;
-  font-size: large;
+.content a:visited {
+  color: var(--main-navy);
+}
+
+.content.show {
+  display: block;
+  height: auto;
+}
+
+.content.show.transitioning {
+  height: auto;
 }
 
 /* ----------------------------------------------------------------- FOOTER */
