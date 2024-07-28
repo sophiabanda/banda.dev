@@ -90,25 +90,21 @@ button {
   width: 100%;
 }
 
-button.collapse {
-  width: 100%;
-  max-width: 600px; /* Optional: Set a max width if needed */
-  margin: 0 auto;
-  display: block;
-}
-
 .collapse {
   color: var(--main-navy);
   background-color: var(--main-cream);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
   outline: none;
   padding: 18px;
-  width: 100%;
   border: none;
-  outline: none;
+  font-size: 20px;
 }
 
 .active,
-.collapse:hover {
+button:hover {
   background-color: var(--main-yellow);
 }
 
@@ -118,27 +114,26 @@ section {
   color: var(--main-navy);
   background-color: var(--main-cream);
   margin-bottom: 25px;
-  padding: 10px;
 }
 
 .content {
-  display: none;
   overflow: hidden;
-  height: 0;
-  transition: height 0.3s ease;
+  transition: max-height 0.5s ease;
+  max-height: 0;
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
   box-sizing: border-box;
+  padding: 0;
+  content-visibility: hidden;
 }
 
-.content.show {
-  display: block;
-  height: auto;
+.content.expanded {
+  max-height: 1000px;
 }
 
-.content.show.transitioning {
-  height: auto;
+.show {
+  content-visibility: visible;
+  padding: 15px;
 }
 
 /* ----------------------------------------------------------------- FOOTER */
