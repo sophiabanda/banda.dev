@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         content.classList.remove('expanded');
         setTimeout(() => {
           content.classList.remove('show');
-        }, 500);
+        }, 400);
       } else {
         content.classList.add('show');
         setTimeout(() => {
