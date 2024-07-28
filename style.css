@@ -36,6 +36,7 @@ html {
   height: 100%;
   background-color: var(--main-navy);
   color: var(--main-cream);
+  scroll-behavior: smooth;
 }
 
 #profile-img {
