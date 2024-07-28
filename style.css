@@ -39,11 +39,7 @@ html {
   scroll-behavior: smooth;
 }
 
-#profile-img {
-  max-width: 40%;
-  height: auto;
-}
-
+/* -------------------------------------------------------------- NAV / HEADER */
 nav {
   display: flex;
   justify-content: space-evenly;
@@ -60,12 +56,18 @@ nav img {
   flex-basis: 33%;
 }
 
+#profile-img {
+  max-width: 40%;
+  height: auto;
+}
+
 nav ul {
   display: flex;
   flex-direction: column;
   flex-basis: 33%;
 }
 
+/* ----------------------------------------------------------------- MAIN */
 main {
   display: grid;
   align-items: center;
@@ -80,16 +82,15 @@ article {
 }
 
 section {
-  border: 2px solid var(--main-orange);
-  /* background-color: var(--main-orange); */
   width: 250px;
   text-align: center;
+  color: var(--main-navy);
+  background-color: var(--main-cream);
+  margin-bottom: 25px;
+  padding: 10px;
 }
 
-/* section div {
-  background-color: var(--main-cream);
-} */
-
+/* ----------------------------------------------------------------- FOOTER */
 footer {
   display: flex;
   position: fixed;
