@@ -44,11 +44,20 @@ nav {
   align-items: center;
   text-align: center;
   border: 5px solid var(--primary-text);
-  padding: 10px;
+}
+
+nav h1 {
+  flex-basis: 33%;
+}
+
+nav img {
+  flex-basis: 33%;
 }
 
 nav ul {
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 33%;
 }
 
 main {
