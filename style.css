@@ -46,7 +46,7 @@ nav {
   align-items: center;
   text-align: center;
   background-color: var(--main-green);
-  text-shadow: 1px 1px 1px var(--main-navy);
+  text-shadow: 0.5px 0.5px var(--main-navy);
 }
 
 nav h1 {
@@ -101,6 +101,7 @@ button {
   padding: 18px;
   border: none;
   font-size: 20px;
+  box-shadow: 2px 2px var(--main-orange);
 }
 
 .active,
@@ -129,6 +130,10 @@ section {
 
 .content.expanded {
   max-height: 1000px;
+}
+
+.content a {
+  color: var(--main-navy);
 }
 
 .show {
