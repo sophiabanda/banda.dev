@@ -138,26 +138,25 @@ section {
 
 .content {
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.5s ease, padding 0.5s ease;
   max-height: 0;
   width: 100%;
   max-width: 600px;
   box-sizing: border-box;
-  padding: 0;
+  padding-left: 15px;
+  padding-right: 15px;
   content-visibility: hidden;
 }
 
 .content.expanded {
   max-height: 1000px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  content-visibility: visible;
 }
 
 .content a {
   color: var(--main-navy);
-}
-
-.show {
-  content-visibility: visible;
-  padding: 15px;
 }
 
 #contact,
