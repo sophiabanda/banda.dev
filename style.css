@@ -13,6 +13,7 @@
 
 * {
   font-family: 'Victor Mono';
+  font-weight: 700;
 }
 
 body,
@@ -39,14 +40,19 @@ html {
   scroll-behavior: smooth;
 }
 
-/* -------------------------------------------------------------- NAV / HEADER */
+/* ----------------------------------------------------------- NAV / HEADER */
+header {
+  border-bottom: 1px solid var(--main-orange);
+  margin-bottom: 50px;
+}
+
 nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
   background-color: var(--main-green);
-  text-shadow: 1px 1px 1px var(--main-navy);
+  text-shadow: 0.5px 0.5px var(--main-navy);
 }
 
 nav h1 {
@@ -60,6 +66,10 @@ nav img {
 #profile-img {
   max-width: 40%;
   height: auto;
+}
+
+#resume-image {
+  max-width: 10rem;
 }
 
 nav ul {
@@ -83,24 +93,27 @@ article {
   justify-content: center;
 }
 
+/* -------------------------------------------------------- BUTTON HEADERS */
+
 button {
   border: none;
-  font-size: large;
   cursor: pointer;
   width: 100%;
-}
-
-.collapse {
+  font-size: 20px;
   color: var(--main-navy);
   background-color: var(--main-cream);
   width: 100%;
-  max-width: 600px;
+  padding: 18px;
+  box-shadow: 2px 2px var(--main-orange);
+  border-radius: 5px;
+}
+
+.collapse {
   margin: 0 auto;
+  max-width: 600px;
   display: block;
   outline: none;
-  padding: 18px;
   border: none;
-  font-size: 20px;
 }
 
 .active,
@@ -108,12 +121,31 @@ button:hover {
   background-color: var(--main-yellow);
 }
 
+.section-flex {
+  display: flex;
+  gap: 10px;
+}
+
+#contact {
+  flex-direction: column;
+}
+
+article a {
+  box-shadow: 2px 2px var(--main-orange);
+  background-color: var(--main-yellow);
+  border-radius: 5px;
+}
+
+/* ---------------------------------------------------------- SECTIONS */
 section {
-  width: 250px;
-  text-align: center;
   color: var(--main-navy);
   background-color: var(--main-cream);
-  margin-bottom: 25px;
+  text-align: center;
+  width: 250px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  box-shadow: 2px 2px var(--main-orange);
 }
 
 .content {
@@ -131,6 +163,10 @@ section {
   max-height: 1000px;
 }
 
+.content a {
+  color: var(--main-navy);
+}
+
 .show {
   content-visibility: visible;
   padding: 15px;
@@ -146,7 +182,10 @@ footer {
   padding: 8px;
   justify-content: center;
   background-color: var(--main-green);
+  border-top: 1px solid var(--main-orange);
 }
+
+/* --------------------------------------------------------- MEDIA QUERIES */
 
 /* Small Tablet Styles */
 @media screen and (min-width: 620px) {
