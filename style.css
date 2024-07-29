@@ -117,15 +117,6 @@ button:hover {
   background-color: var(--main-yellow);
 }
 
-.section-flex {
-  display: flex;
-  gap: 10px;
-}
-
-#contact {
-  flex-direction: column;
-}
-
 article a {
   box-shadow: 2px 2px var(--main-orange);
   background-color: var(--main-yellow);
@@ -134,6 +125,7 @@ article a {
 
 /* ---------------------------------------------------------- SECTIONS */
 section {
+  display: flex;
   color: var(--main-navy);
   background-color: var(--main-cream);
   text-align: center;
@@ -166,6 +158,15 @@ section {
 .show {
   content-visibility: visible;
   padding: 15px;
+}
+
+#contact,
+#work {
+  flex-direction: column;
+}
+
+#resume {
+  gap: 10px;
 }
 
 #resume-image {
