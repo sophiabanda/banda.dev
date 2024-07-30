@@ -21,14 +21,11 @@
 body,
 p,
 a,
-ul,
-li,
 h3,
 h1 {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  list-style-type: none;
 }
 
 a,
@@ -38,55 +35,80 @@ a:visited {
 
 body,
 html {
-  height: 100%;
+  /* height: 100vh; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow-y: auto;
   background-color: var(--main-navy);
   color: var(--main-cream);
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  padding-left: 50px;
+}
+
+body {
+  padding-left: 200px;
 }
 
 /* ----------------------------------------------------------- NAV / HEADER */
 header {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20vw;
+  z-index: 1000;
   background-color: var(--main-green);
   text-shadow: 0.5px 0.5px var(--main-navy);
-  border-bottom: 1px solid var(--main-orange);
-  margin-bottom: 50px;
+  border-right: 2px solid var(--main-orange);
+  box-sizing: border-box;
 }
 
-#h1-p {
+#header-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-basis: 50%;
-  padding: 15px;
-}
-
-nav img {
-  flex-basis: 50%;
-}
-
-nav ul {
-  display: none;
-}
-
-#profile-img {
-  max-width: 40%;
-  height: auto;
-}
-
-/* ----------------------------------------------------------------- MAIN */
-main {
   align-items: center;
+  font-size: 2vw;
+  gap: 10px;
+  padding: 15px;
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+
+header img {
+  align-self: flex-end;
+  max-height: 250px;
+  object-fit: contain;
+  flex-basis: 50%;
+  width: auto;
+}
+
+/* -------------------------------------------------------- MAIN/ARTICLE */
+main {
+  display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  margin: 20px;
+  width: 83vw;
+  padding-top: 150px;
 }
 
 article {
+  margin-bottom: 75px;
+  margin-top: 50px;
+}
+
+article div {
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
+  align-items: center;
 }
 
 /* -------------------------------------------------------- BUTTON HEADERS */
@@ -94,13 +116,13 @@ article {
 button {
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 600px;
+  height: 100px;
   font-size: 20px;
   color: var(--main-navy);
   background-color: var(--main-cream);
-  width: 100%;
   padding: 18px;
-  box-shadow: 2px 2px var(--main-orange);
+  box-shadow: 5px 5px var(--main-orange);
   border-radius: var(--border-radius);
 }
 
@@ -117,15 +139,10 @@ button:hover {
   background-color: var(--main-yellow);
 }
 
-article a {
-  box-shadow: 2px 2px var(--main-orange);
-  background-color: var(--main-yellow);
-  border-radius: var(--border-radius);
-}
-
 /* ---------------------------------------------------------- SECTIONS */
 section {
   display: flex;
+  flex-direction: column;
   color: var(--main-navy);
   background-color: var(--main-cream);
   text-align: center;
@@ -133,7 +150,8 @@ section {
   border-radius: var(--border-radius);
   margin-top: 5px;
   margin-bottom: 15px;
-  box-shadow: 2px 2px var(--main-orange);
+  box-shadow: 5px 5px var(--main-orange);
+  overflow: hidden;
 }
 
 .content {
@@ -158,17 +176,25 @@ section {
 .content a {
   color: var(--main-navy);
   width: 70%;
+  height: 25px;
+  padding: 10px;
+  box-shadow: 2px 2px var(--main-orange);
+  background-color: var(--main-yellow);
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
 }
 
 #contact,
-#work {
+#work,
+#about,
+#resume {
   flex-direction: column;
   align-items: center;
 }
 
 #work {
   overflow: scroll;
-  max-height: 550px;
+  max-height: 500px;
   scroll-snap-type: y mandatory;
 }
 
@@ -217,56 +243,45 @@ section {
   border: 3px solid var(--main-yellow);
 }
 
-/* ----------------------------------------------------------------- FOOTER */
-footer {
-  display: flex;
-  align-items: center;
+/* ------------------------------------------------------- STARS */
+.star {
   position: fixed;
+  pointer-events: none;
+}
+
+.star:before,
+.star:after {
+  position: absolute;
+  top: 0;
   left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 8px;
-  justify-content: center;
-  background-color: var(--main-green);
-  border-top: 1px solid var(--main-orange);
+  content: '\2726';
+  font-size: 12px;
+}
+
+.star:before {
+  color: transparent;
+  text-shadow: 0 0 3px rgb(252, 252, 219);
+}
+
+.star:after {
+  background: rgb(252, 252, 176);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* --------------------------------------------------------- MEDIA QUERIES */
+
+/* Mobile Styles */
+@media screen and (min-width: 350px) {
+}
 
 /* Small Tablet Styles */
 @media screen and (min-width: 620px) {
 }
 /* Lg Tablet & Laptop Styles */
 @media screen and (min-width: 960px) {
-  nav h1 {
-    flex-basis: 33%;
-  }
-
-  nav img {
-    flex-basis: 33%;
-  }
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 33%;
-  }
 }
 /* Desktop Styles */
 @media screen and (min-width: 1200px) {
-  header h1,
-  p {
-    font-size: 35px;
-    margin-left: 40px;
-  }
-
-  header {
-    max-height: 300px;
-  }
-
-  header img {
-    max-height: 250px;
-    flex-basis: 25%;
-    width: auto;
-    object-fit: contain;
-  }
 }
