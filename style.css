@@ -9,12 +9,13 @@
 
 @font-face {
   font-family: 'Victor Mono';
+  font-weight: 100 - 700;
   src: url('assets/fonts/VictorMono-VariableFont_wght.ttf');
 }
 
 * {
   font-family: 'Victor Mono';
-  font-weight: 700;
+  font-weight: 600;
 }
 
 body,
@@ -159,6 +160,7 @@ section {
 
 .content a {
   color: var(--main-navy);
+  width: 70%;
 }
 
 #contact,
@@ -168,24 +170,26 @@ section {
 
 #work {
   overflow: scroll;
-  max-height: 600px;
+  max-height: 550px;
   scroll-snap-type: y mandatory;
 }
 
 #work div {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   padding: 15px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   gap: 15px;
   border-bottom: 5px dotted var(--main-orange);
 }
 
 #work img {
-  max-width: 250px;
-  height: auto;
+  max-height: 200px;
+  width: auto;
   border: 2px solid var(--main-navy);
   border-radius: var(--border-radius);
 }
