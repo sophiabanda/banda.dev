@@ -45,11 +45,6 @@ html {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  padding-left: 50px;
-}
-
-body {
-  padding-left: 200px;
 }
 
 /* ----------------------------------------------------------- NAV / HEADER */
@@ -102,6 +97,7 @@ main {
 article {
   margin-bottom: 75px;
   margin-top: 50px;
+  padding-left: 200px;
 }
 
 article div {
@@ -233,6 +229,7 @@ section {
 #container {
   display: flex;
   width: 100%;
+  padding-left: 0;
   justify-content: center;
   align-items: center;
   text-align: center;
