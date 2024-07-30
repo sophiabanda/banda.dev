@@ -242,27 +242,10 @@ footer {
 }
 /* Lg Tablet & Laptop Styles */
 @media screen and (min-width: 960px) {
-  nav h1 {
-    flex-basis: 33%;
-  }
-
-  nav img {
-    flex-basis: 33%;
-  }
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 33%;
-  }
 }
+
 /* Desktop Styles */
 @media screen and (min-width: 1200px) {
-  header h1,
-  p {
-    font-size: 35px;
-    margin-left: 40px;
-  }
-
   header {
     max-height: 300px;
   }
