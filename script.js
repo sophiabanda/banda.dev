@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 window.addEventListener(
   'mousemove',
   function (e) {
-    var arr = [1, 0.9, 0.8, 0.5, 0.2];
+    const arr = [1, 0.9, 0.8, 0.5, 0.2];
 
     arr.forEach(function (i) {
       var x = (1 - i) * 75;
