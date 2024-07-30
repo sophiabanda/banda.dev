@@ -23,7 +23,8 @@ p,
 a,
 ul,
 li,
-h3 {
+h3,
+h1 {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -51,30 +52,29 @@ header {
 
 nav {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
   background-color: var(--main-green);
   text-shadow: 0.5px 0.5px var(--main-navy);
 }
 
-nav h1 {
-  flex-basis: 33%;
+#h1-p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 50%;
+  padding: 15px;
 }
 
 nav img {
-  flex-basis: 33%;
+  flex-basis: 50%;
+}
+
+nav ul {
+  display: none;
 }
 
 #profile-img {
   max-width: 40%;
   height: auto;
-}
-
-nav ul {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 33%;
 }
 
 /* ----------------------------------------------------------------- MAIN */
@@ -222,6 +222,7 @@ section {
 /* ----------------------------------------------------------------- FOOTER */
 footer {
   display: flex;
+  align-items: center;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -239,6 +240,18 @@ footer {
 }
 /* Lg Tablet & Laptop Styles */
 @media screen and (min-width: 960px) {
+  nav h1 {
+    flex-basis: 33%;
+  }
+
+  nav img {
+    flex-basis: 33%;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+  }
 }
 /* Desktop Styles */
 @media screen and (min-width: 960px) {
