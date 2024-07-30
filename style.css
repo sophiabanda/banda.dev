@@ -168,9 +168,13 @@ section {
 
 #work {
   overflow: scroll;
+  max-height: 600px;
+  scroll-snap-type: y mandatory;
 }
 
 #work div {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   display: flex;
   flex-direction: column;
   padding: 15px;
