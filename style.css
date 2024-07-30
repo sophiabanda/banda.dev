@@ -46,14 +46,11 @@ html {
 
 /* ----------------------------------------------------------- NAV / HEADER */
 header {
-  border-bottom: 1px solid var(--main-orange);
-  margin-bottom: 50px;
-}
-
-nav {
   display: flex;
   background-color: var(--main-green);
   text-shadow: 0.5px 0.5px var(--main-navy);
+  border-bottom: 1px solid var(--main-orange);
+  margin-bottom: 50px;
 }
 
 #h1-p {
@@ -259,5 +256,21 @@ footer {
   }
 }
 /* Desktop Styles */
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1200px) {
+  header h1,
+  p {
+    font-size: 35px;
+    margin-left: 40px;
+  }
+
+  header {
+    max-height: 300px;
+  }
+
+  header img {
+    max-height: 250px;
+    flex-basis: 25%;
+    width: auto;
+    object-fit: contain;
+  }
 }
