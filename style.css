@@ -35,7 +35,10 @@ a:visited {
 
 body,
 html {
-  height: 100%;
+  /* height: 100vh; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
   overflow-y: auto;
   background-color: var(--main-navy);
   color: var(--main-cream);
@@ -43,12 +46,10 @@ html {
   margin: 0;
   padding: 0;
   padding-left: 50px;
-  display: flex;
 }
 
 body {
   padding-left: 200px;
-  position: relative;
 }
 
 /* ----------------------------------------------------------- NAV / HEADER */
