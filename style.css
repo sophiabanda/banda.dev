@@ -120,6 +120,10 @@ button:hover {
   background-color: var(--main-yellow);
 }
 
+article {
+  margin-bottom: 75px;
+}
+
 article a {
   box-shadow: 2px 2px var(--main-orange);
   background-color: var(--main-yellow);
