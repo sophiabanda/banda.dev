@@ -9,150 +9,55 @@
 
 html,
 body {
+  border: 2px solid red;
   height: 100%;
 }
 
 * {
-  font-family: 'Victor Mono';
-  font-weight: 600;
   margin: 0;
   padding: 0;
   text-decoration: none;
+  list-style-type: none;
 }
 
-a,
-a:visited {
-  color: var(--main-cream);
-}
-
-@font-face {
-  font-family: 'Victor Mono';
-  font-weight: 100 - 700;
-  src: url('assets/fonts/VictorMono-VariableFont_wght.ttf');
-}
-
-#main-grid-container {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  background-color: var(--main-navy);
-  color: var(--main-cream);
-}
-
-/* --------------------------------------------------HEADER */
-header {
+#body-grid-container {
+  text-align: center;
   height: 100%;
-  grid-column: 1 / 4;
-  grid-row: 1 / 13;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--main-green);
-  border-right: 2px solid var(--main-orange);
-}
-
-header img {
-  align-self: flex-end;
-  max-width: 250px;
-  object-fit: contain;
-}
-
-h1 {
-  margin-top: 15px;
-  margin-left: 15px;
-  font-size: 5vw;
-}
-
-/* --------------------------------------------------MAIN */
-main {
-  border: 2px solid white;
-  grid-column: 4 / 13;
-  grid-row: 4 / auto;
   display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+}
+
+/* Prelimenary Setup */
+
+header {
+  background-color: turquoise;
+  grid-column: 1 / 7;
+  grid-row: 1 / 4;
+}
+
+main {
+  border: 2px solid red;
+  grid-column: 1 / 7;
+  grid-row: 4 / 15;
+  display: grid;
+  align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
-/* ------------------------------------SECTION BUTTONS */
-
-button {
-  border: none;
-  cursor: pointer;
-  width: 300px;
-  height: 100px;
-  font-size: 20px;
-  color: var(--main-navy);
-  background-color: var(--main-cream);
-  padding: 18px;
-  box-shadow: 5px 5px var(--main-orange);
-  border-radius: var(--border-radius);
-}
-
-.collapse {
-  margin: 0 auto;
-  max-width: 600px;
-  display: block;
-  outline: none;
-  border: none;
-}
-
-.active,
-button:hover {
-  background-color: var(--main-yellow);
-}
-
-/* --------------------------------------------SECTIONS */
-
 section {
+  background-color: rgb(244, 201, 244);
+  width: 75%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  margin: auto;
 }
 
-#about-section,
-#work-section,
-#resume-section,
-#contact-section {
-  color: var(--main-navy);
-  background-color: var(--main-cream);
-  text-align: center;
-  width: 250px;
-  border-radius: var(--border-radius);
-  margin-top: 5px;
-  margin-bottom: 15px;
-  box-shadow: 5px 5px var(--main-orange);
-  overflow: hidden;
-}
-
-.content {
-  overflow: hidden;
-  transition: max-height 0.5s ease, padding 0.5s ease;
-  max-height: 0;
-  width: 100%;
-  max-width: 600px;
-  box-sizing: border-box;
-  padding-left: 15px;
-  padding-right: 15px;
-  content-visibility: hidden;
-}
-
-.content.expanded {
-  max-height: 1000px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  content-visibility: visible;
-}
-
-.content a {
-  color: var(--main-navy);
-  width: 70%;
-  height: 25px;
-  padding: 10px;
-  box-shadow: 2px 2px var(--main-orange);
-  background-color: var(--main-yellow);
-  border-radius: var(--border-radius);
-  margin-bottom: 10px;
+footer {
+  grid-column: 1 / 7;
+  grid-row: 15 /16;
+  background-color: #e07a5f;
 }
