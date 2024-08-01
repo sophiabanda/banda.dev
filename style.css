@@ -29,6 +29,11 @@ body {
   list-style-type: none;
 }
 
+a,
+a:visited {
+  color: var(--main-cream);
+}
+
 /* ---------------------- HEADER */
 header {
   width: 100vw;
@@ -38,9 +43,9 @@ header {
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  border-bottom: 2px solid var(--main-orange);
-  background-color: var(--main-green);
   color: var(--main-cream);
+  background-color: var(--main-green);
+  border-bottom: 2px solid var(--main-orange);
   text-shadow: 2px 2px var(--main-navy);
 }
 
@@ -53,10 +58,11 @@ header img {
   max-height: 22vh;
 }
 
-/* -----------------------MAIN */
+/* --------------------------MAIN */
 main {
   display: grid;
-  gap: 25px;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -64,21 +70,76 @@ main {
   overflow-y: auto;
   padding-top: 26vh;
   padding-bottom: 8vh;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
+/* -----------------------section BUTTON */
+button {
+  border: none;
+  cursor: pointer;
+  height: 10vh;
+  width: 40vw;
+  font-size: 20px;
+  color: var(--main-navy);
+  background-color: var(--main-cream);
+  padding: 18px;
+  box-shadow: 5px 5px var(--main-orange);
+  border-radius: var(--border-radius);
+  margin-bottom: 15px;
+}
+
+/* -----------------------SECTION */
 section {
-  background-color: rgb(244, 201, 244);
-  width: 50vw;
   display: flex;
+  height: 100%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+  width: 40vw;
+}
+
+section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   margin: auto;
+  color: var(--main-navy);
+  background-color: var(--main-cream);
+  box-shadow: 5px 5px var(--main-orange);
+  border-radius: var(--border-radius);
+}
+
+#work-section {
+  overflow: auto;
+  max-height: 40vh;
+  width: 100%;
+}
+
+#work-section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  padding: 15px;
+  gap: 15px;
+  background-color: none;
+  box-shadow: none;
+  border-bottom: 5px dotted var(--main-orange);
+  max-height: 100%;
 }
 
 section img {
   max-width: 25vw;
 }
 
+/* -----------------------FOOTER */
 footer {
   width: 100%;
   position: fixed;
@@ -90,6 +151,8 @@ footer {
   align-items: center;
   padding: 8px;
 }
+
+/* -----------------------RESPONSIVITY */
 
 /* Mobile Styles */
 @media screen and (min-width: 350px) {

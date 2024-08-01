@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+  function addShowClassToBody() {
+    document.body.classList.add('show');
+  }
+
+  // Call the function to add the 'show' class to the body
+  addShowClassToBody();
   const collapseButtons = document.querySelectorAll('.collapse');
   collapseButtons.forEach((button) => {
     button.addEventListener('click', function () {
