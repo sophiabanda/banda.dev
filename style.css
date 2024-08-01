@@ -7,22 +7,14 @@
   --border-radius: 5px;
 }
 
-@font-face {
-  font-family: 'Victor Mono';
-  font-weight: 100 - 700;
-  src: url('assets/fonts/VictorMono-VariableFont_wght.ttf');
+html,
+body {
+  height: 100%;
 }
 
 * {
   font-family: 'Victor Mono';
   font-weight: 600;
-}
-
-body,
-p,
-a,
-h3,
-h1 {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -33,90 +25,57 @@ a:visited {
   color: var(--main-cream);
 }
 
-body,
-html {
-  /* height: 100vh; */
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  overflow-y: auto;
+@font-face {
+  font-family: 'Victor Mono';
+  font-weight: 100 - 700;
+  src: url('assets/fonts/VictorMono-VariableFont_wght.ttf');
+}
+
+#main-grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   background-color: var(--main-navy);
   color: var(--main-cream);
-  scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
-  padding-left: 50px;
 }
 
-body {
-  padding-left: 200px;
-}
-
-/* ----------------------------------------------------------- NAV / HEADER */
+/* --------------------------------------------------HEADER */
 header {
+  height: 100%;
+  grid-column: 1 / 4;
+  grid-row: 1 / 13;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 20vw;
-  z-index: 1000;
   background-color: var(--main-green);
-  text-shadow: 0.5px 0.5px var(--main-navy);
   border-right: 2px solid var(--main-orange);
-  box-sizing: border-box;
-}
-
-#header-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 2vw;
-  gap: 10px;
-  padding: 15px;
-  flex-basis: 50%;
-  flex-grow: 1;
 }
 
 header img {
   align-self: flex-end;
-  max-height: 250px;
+  max-width: 250px;
   object-fit: contain;
-  flex-basis: 50%;
-  width: auto;
 }
 
-/* -------------------------------------------------------- MAIN/ARTICLE */
+h1 {
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 5vw;
+}
+
+/* --------------------------------------------------MAIN */
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 83vw;
-  padding-top: 150px;
+  grid-column: 4 / 13;
+  grid-row: 4 / auto;
 }
 
-article {
-  margin-bottom: 75px;
-  margin-top: 50px;
-}
-
-article div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* -------------------------------------------------------- BUTTON HEADERS */
+/* ------------------------------------SECTION BUTTONS */
 
 button {
   border: none;
   cursor: pointer;
-  width: 600px;
+  width: 300px;
   height: 100px;
   font-size: 20px;
   color: var(--main-navy);
@@ -139,10 +98,20 @@ button:hover {
   background-color: var(--main-yellow);
 }
 
-/* ---------------------------------------------------------- SECTIONS */
+/* --------------------------------------------SECTIONS */
+
 section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#about-section,
+#work-section,
+#resume-section,
+#contact-section {
   color: var(--main-navy);
   background-color: var(--main-cream);
   text-align: center;
@@ -182,106 +151,4 @@ section {
   background-color: var(--main-yellow);
   border-radius: var(--border-radius);
   margin-bottom: 10px;
-}
-
-#contact,
-#work,
-#about,
-#resume {
-  flex-direction: column;
-  align-items: center;
-}
-
-#work {
-  overflow: scroll;
-  max-height: 500px;
-  scroll-snap-type: y mandatory;
-}
-
-#work div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  padding: 15px;
-  gap: 15px;
-  border-bottom: 5px dotted var(--main-orange);
-}
-
-#work img {
-  max-height: 200px;
-  width: auto;
-  border: 2px solid var(--main-navy);
-  border-radius: var(--border-radius);
-}
-
-#work small {
-  margin-bottom: 15px;
-}
-
-#resume {
-  gap: 15px;
-}
-
-#resume-image {
-  max-width: 10rem;
-}
-
-/* ----------------------------------------------------------------- RESUME PAGE */
-#container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-#container div img {
-  max-width: 95%;
-  border: 3px solid var(--main-yellow);
-}
-
-/* ------------------------------------------------------- STARS */
-.star {
-  position: fixed;
-  pointer-events: none;
-}
-
-.star:before,
-.star:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '\2726';
-  font-size: 12px;
-}
-
-.star:before {
-  color: transparent;
-  text-shadow: 0 0 3px rgb(252, 252, 219);
-}
-
-.star:after {
-  background: rgb(252, 252, 176);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* --------------------------------------------------------- MEDIA QUERIES */
-
-/* Mobile Styles */
-@media screen and (min-width: 350px) {
-}
-
-/* Small Tablet Styles */
-@media screen and (min-width: 620px) {
-}
-/* Lg Tablet & Laptop Styles */
-@media screen and (min-width: 960px) {
-}
-/* Desktop Styles */
-@media screen and (min-width: 1200px) {
 }
