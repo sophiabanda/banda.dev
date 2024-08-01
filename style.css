@@ -66,8 +66,12 @@ h1 {
 
 /* --------------------------------------------------MAIN */
 main {
+  border: 2px solid white;
   grid-column: 4 / 13;
   grid-row: 4 / auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 /* ------------------------------------SECTION BUTTONS */
