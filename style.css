@@ -31,17 +31,17 @@ body {
 
 /* ---------------------- HEADER */
 header {
+  width: 100vw;
   display: flex;
   text-align: left;
   justify-content: center;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
   border-bottom: 2px solid var(--main-orange);
   background-color: var(--main-green);
   color: var(--main-cream);
   text-shadow: 2px 2px var(--main-navy);
-  position: fixed;
-  width: 100%;
 }
 
 header h1 {
@@ -62,7 +62,8 @@ main {
   justify-content: center;
   flex: 1;
   overflow-y: auto;
-  padding-top: 22vh;
+  padding-top: 26vh;
+  padding-bottom: 8vh;
 }
 
 section {
@@ -80,10 +81,25 @@ section img {
 
 footer {
   width: 100%;
+  position: fixed;
+  bottom: 0;
   background-color: var(--main-green);
   border-top: 2px solid var(--main-orange);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 8px;
+}
+
+/* Mobile Styles */
+@media screen and (min-width: 350px) {
+}
+/* Small Tablet Styles */
+@media screen and (min-width: 620px) {
+}
+/* Lg Tablet & Laptop Styles */
+@media screen and (min-width: 960px) {
+}
+/* Desktop Styles */
+@media screen and (min-width: 1200px) {
 }
