@@ -17,6 +17,7 @@ body {
   height: 100%;
   font-family: 'Victor Mono';
   font-weight: 100 - 700;
+  background-color: var(--main-navy);
 }
 
 * {
@@ -46,6 +47,7 @@ header {
   justify-content: center;
   align-items: center;
   justify-content: space-around;
+  border-bottom: 2px solid var(--main-orange);
 }
 
 header h1 {
@@ -60,9 +62,6 @@ header img {
 /* Prelimenary Setup */
 
 main {
-  border: 2px solid red;
-  padding: 15px;
-  /* overflow: auto; */
   grid-column: 1 / 7;
   grid-row: 4 / 15;
   display: grid;
@@ -84,5 +83,9 @@ section {
 footer {
   grid-column: 1 / 7;
   grid-row: 15 /16;
-  background-color: #e07a5f;
+  background-color: var(--main-green);
+  border-top: 2px solid var(--main-orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
