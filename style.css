@@ -32,7 +32,7 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(15, 1fr);
+  grid-template-rows: repeat(20, 1fr);
 }
 
 /* ---------------------- HEADER */
@@ -41,7 +41,7 @@ header {
   color: var(--main-cream);
   text-shadow: 2px 2px var(--main-navy);
   grid-column: 1 / 7;
-  grid-row: 1 / 4;
+  grid-row: 1 / 5;
   display: flex;
   text-align: left;
   justify-content: center;
@@ -59,21 +59,18 @@ header img {
   max-height: 22vh;
 }
 
-/* Prelimenary Setup */
-
 main {
   grid-column: 1 / 7;
-  grid-row: 4 / 15;
+  grid-row: 5 / 20;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(auto 1fr);
 }
 
 section {
   background-color: rgb(244, 201, 244);
   width: 75%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,7 +79,7 @@ section {
 
 footer {
   grid-column: 1 / 7;
-  grid-row: 15 /16;
+  grid-row: 20 / 21;
   background-color: var(--main-green);
   border-top: 2px solid var(--main-orange);
   display: flex;
