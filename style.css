@@ -7,10 +7,16 @@
   --border-radius: 5px;
 }
 
+@font-face {
+  font-family: 'Victor Mono';
+  src: url('assets/fonts/VictorMono-VariableFont_wght.ttf');
+}
+
 html,
 body {
-  border: 2px solid red;
   height: 100%;
+  font-family: 'Victor Mono';
+  font-weight: 100 - 700;
 }
 
 * {
@@ -28,16 +34,35 @@ body {
   grid-template-rows: repeat(15, 1fr);
 }
 
-/* Prelimenary Setup */
-
+/* ---------------------- HEADER */
 header {
-  background-color: turquoise;
+  background-color: var(--main-green);
+  color: var(--main-cream);
+  text-shadow: 2px 2px var(--main-navy);
   grid-column: 1 / 7;
   grid-row: 1 / 4;
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
 }
+
+header h1 {
+  font-size: clamp(30px, 5vw, 90px);
+}
+
+header img {
+  align-self: flex-end;
+  max-height: 22vh;
+}
+
+/* Prelimenary Setup */
 
 main {
   border: 2px solid red;
+  padding: 15px;
+  /* overflow: auto; */
   grid-column: 1 / 7;
   grid-row: 4 / 15;
   display: grid;
