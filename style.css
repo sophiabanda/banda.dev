@@ -120,7 +120,7 @@ button {
   cursor: pointer;
   width: 60vw;
   height: 100px;
-  font-size: clamp(15px, 5vw, 70px);
+  font-size: clamp(15px, 4vw, 70px);
   color: var(--main-navy);
   background-color: var(--main-cream);
   padding: 18px;
@@ -196,7 +196,7 @@ section {
 
 #work {
   overflow-y: scroll;
-  max-height: 60vh;
+  max-height: 75vh;
   scroll-snap-type: y mandatory;
 }
 
@@ -213,10 +213,15 @@ section {
 }
 
 #work img {
-  max-height: 200px;
-  width: auto;
+  height: 30vh;
+  max-width: 250px;
   border: 2px solid var(--main-navy);
   border-radius: var(--border-radius);
+}
+
+small,
+p {
+  font-size: clamp(10px, 2vw, 15px);
 }
 
 #work small {
