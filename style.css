@@ -13,6 +13,19 @@
   src: url('assets/fonts/VictorMono-VariableFont_wght.ttf');
 }
 
+body,
+html {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  /* background-color: var(--main-navy); */
+  border: 2px solid gray;
+}
+
 * {
   font-family: 'Victor Mono';
   font-weight: 600;
@@ -21,267 +34,52 @@
   text-decoration: none;
 }
 
-body,
-html {
-  height: 100%;
-}
-
 a,
 a:visited {
   color: var(--main-cream);
 }
 
-body,
-html {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-y: auto;
-  background-color: var(--main-navy);
-  color: var(--main-cream);
-  scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  padding-left: 25vw;
-}
-
-#resume-container {
-  padding-left: 0;
-}
-
-/* ----------------------------------------------------------- NAV / HEADER */
+/* ----------------------------------------------------------- HEADER */
 header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 25vw;
-  z-index: 1000;
-  background-color: var(--main-green);
-  text-shadow: 0.5px 0.5px var(--main-navy);
-  border-right: 2px solid var(--main-orange);
-  box-sizing: border-box;
+  border: 2px solid green;
+  /* background-color: rgb(235, 171, 235); */
+  grid-column: 1 / 4;
+  grid-row: 1 / 21;
+  /* transition: grid-column 0.5s ease, grid-row 0.5s ease,
+    background-color 0.5s ease; */
 }
 
-#header-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 2vw;
-  gap: 10px;
-  padding: 15px;
-  flex-basis: 50%;
-  flex-grow: 1;
-}
-
-header img {
-  align-self: flex-end;
-  max-height: 250px;
-  object-fit: contain;
-  flex-basis: 50%;
-  width: auto;
-}
-
-/* -------------------------------------------------------- MAIN/ARTICLE */
+/* --------------------------------------------------------- MAIN/SECTIONS */
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 83vw;
-  padding-top: 150px;
-  margin-bottom: 75px;
-  margin-top: 50px;
+  background-color: pink;
+  grid-column: 4 / 13;
+  grid-row: 1 / 21;
+  /* transition: grid-column 0.5s ease, grid-row 0.5s ease,
+    background-color 0.5s ease; */
 }
-
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* -------------------------------------------------------- BUTTON HEADERS */
-
-button {
-  border: none;
-  cursor: pointer;
-  width: 60vw;
-  height: 100px;
-  font-size: clamp(15px, 4vw, 70px);
-  color: var(--main-navy);
-  background-color: var(--main-cream);
-  padding: 18px;
-  box-shadow: 5px 5px var(--main-orange);
-  border-radius: var(--border-radius);
-}
-
-.collapse {
-  margin: 0 auto;
-  max-width: 60vw;
-  display: block;
-  outline: none;
-  border: none;
-}
-
-.active,
-button:hover {
-  background-color: var(--main-yellow);
-}
-
-/* ---------------------------------------------------------- SECTIONS */
-section div {
-  display: flex;
-  flex-direction: column;
-  color: var(--main-navy);
-  background-color: var(--main-cream);
-  text-align: center;
-  width: 25vw;
-  border-radius: var(--border-radius);
-  margin-top: 5px;
-  margin-bottom: 15px;
-  box-shadow: 5px 5px var(--main-orange);
-  overflow: hidden;
-}
-
-.content {
-  overflow: hidden;
-  transition: max-height 0.5s ease, padding 0.5s ease;
-  max-height: 0;
-  width: 100%;
-  max-width: 60vw;
-  box-sizing: border-box;
-  padding-left: 8vw;
-  padding-right: 8vw;
-  content-visibility: hidden;
-}
-
-.content.expanded {
-  max-height: 1000px;
-  padding-top: 8vw;
-  padding-bottom: 8vw;
-  content-visibility: visible;
-}
-
-.content a {
-  color: var(--main-navy);
-  width: 20vw;
-  height: auto;
-  padding: 10px;
-  box-shadow: 2px 2px var(--main-orange);
-  background-color: var(--main-yellow);
-  border-radius: var(--border-radius);
-  margin-bottom: 10px;
-}
-
-#contact-section,
-#work-section,
-#about-section,
-#resume-section {
-  flex-direction: column;
-  align-items: center;
-}
-
-#work {
-  overflow-y: scroll;
-  max-height: 75vh;
-  scroll-snap-type: y mandatory;
-}
-
-#work div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  padding: 15px;
-  gap: 15px;
-  border-bottom: 5px dotted var(--main-orange);
-}
-
-#work img {
-  height: 30vh;
-  max-width: 250px;
-  border: 2px solid var(--main-navy);
-  border-radius: var(--border-radius);
-}
-
-p {
-  font-size: clamp(10px, 2vw, 15px);
-}
-
-#work small {
-  margin-bottom: 15px;
-}
-
-#resume {
-  gap: 15px;
-}
-
-#resume-image {
-  max-width: 10rem;
-}
-
-/* ----------------------------------------------------------------- RESUME PAGE */
-#resume-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-#resume-container div img {
-  max-width: 95%;
-  border: 3px solid var(--main-yellow);
-}
-
-/* ------------------------------------------------------- STARS */
-.star {
-  position: fixed;
-  pointer-events: none;
-}
-
-.star:before,
-.star:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '\2726';
-  font-size: 12px;
-}
-
-.star:before {
-  color: transparent;
-  text-shadow: 0 0 3px rgb(252, 252, 219);
-}
-
-.star:after {
-  background: rgb(252, 252, 176);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* --------------------------------------------------------- MEDIA QUERIES */
 
 /* Mobile Styles */
-@media screen and (min-width: 350px) {
-}
+/* @media screen and (max-width: 349px) {
+} */
+
 /* Small Tablet Styles */
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 350px) and (max-width: 759px) {
+  /* header {
+    grid-column: 1 / 13;
+    grid-row: 1 / 4;
+  }
+
+  main {
+    grid-column: 1 / 13;
+    grid-row: 4/ 21;
+  } */
 }
+
 /* Lg Tablet & Laptop Styles */
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 760px) and (max-width: 959px) {
 }
+
 /* Desktop Styles */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 960px) {
 }
