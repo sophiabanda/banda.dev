@@ -150,7 +150,7 @@ main {
   scroll-snap-stop: always;
   padding: 15px;
   gap: 15px;
-  border-bottom: 5px dotted var(--main-orange);
+  border-top: 5px dotted var(--main-orange);
 }
 
 /* --------------------------------------------------------- SECTIONS */
