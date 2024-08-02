@@ -180,6 +180,8 @@ div#modal-body {
   overflow-y: auto;
   scroll-snap-type: y mandatory;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal img {
