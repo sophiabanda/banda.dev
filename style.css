@@ -104,7 +104,6 @@ main {
 article {
   margin-bottom: 75px;
   margin-top: 50px;
-  padding-left: 200px;
 }
 
 article div {
@@ -241,7 +240,6 @@ p {
 #resume-container {
   display: flex;
   width: 100%;
-  padding-left: 0;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -291,7 +289,6 @@ p {
 /* Lg Tablet & Laptop Styles */
 @media screen and (min-width: 960px) {
 }
-
 /* Desktop Styles */
 @media screen and (min-width: 1200px) {
 }
