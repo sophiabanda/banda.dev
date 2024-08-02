@@ -22,8 +22,8 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(20, 1fr);
-  /* background-color: var(--main-navy); */
-  border: 2px solid gray;
+  background-color: var(--main-navy);
+  color: var(--main-cream);
 }
 
 * {
@@ -41,22 +41,124 @@ a:visited {
 
 /* ----------------------------------------------------------- HEADER */
 header {
-  border: 2px solid green;
-  /* background-color: rgb(235, 171, 235); */
   grid-column: 1 / 4;
   grid-row: 1 / 21;
+  background-color: var(--main-green);
+  border-right: 2px solid var(--main-orange);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header img {
+  align-self: flex-end;
+  max-height: 30vh;
+}
+
+h1 {
+  font-size: 4vw;
+  margin-left: 15px;
+  margin-top: 15px;
+  text-shadow: 3px 3px var(--main-navy);
+}
+
+/* -------------------------------------------------------- BUTTON HEADERS */
+button {
+  border: none;
+  cursor: pointer;
+  font-size: clamp(15px, 4vw, 70px);
+  color: var(--main-navy);
+  background-color: var(--main-cream);
+  padding: 18px;
+  box-shadow: 5px 5px var(--main-orange);
+  border-radius: var(--border-radius);
+}
+
+.collapse {
+  margin: 0 auto;
+  max-width: 60vw;
+  display: block;
+  outline: none;
+  border: none;
+}
+
+.active,
+button:hover {
+  background-color: var(--main-yellow);
+}
+
+/* --------------------------------------------------------- MAIN */
+main {
+  grid-column: 4 / 13;
+  grid-row: 1 / 21;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   /* transition: grid-column 0.5s ease, grid-row 0.5s ease,
     background-color 0.5s ease; */
 }
 
-/* --------------------------------------------------------- MAIN/SECTIONS */
-main {
-  background-color: pink;
-  grid-column: 4 / 13;
-  grid-row: 1 / 21;
-  /* transition: grid-column 0.5s ease, grid-row 0.5s ease,
-    background-color 0.5s ease; */
+/* --------------------------------------------------------- SECTIONS */
+section img {
+  height: 30vh;
+  max-width: 250px;
+  border: 2px solid var(--main-navy);
+  border-radius: var(--border-radius);
 }
+
+.content a {
+  color: var(--main-navy);
+  width: 20vw;
+  height: auto;
+  padding: 10px;
+  box-shadow: 2px 2px var(--main-orange);
+  background-color: var(--main-yellow);
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+}
+
+.section {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------------------------------------------------------   MODALS */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.content {
+  content-visibility: hidden;
+  margin: auto;
+  width: 80%;
+}
+
+.close {
+  color: var(--main-orange);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* --------------------------------------------------------- MEDIA QUERIES */
 
 /* Mobile Styles */
@@ -65,7 +167,7 @@ main {
 
 /* Small Tablet Styles */
 @media screen and (min-width: 350px) and (max-width: 759px) {
-  /* header {
+  header {
     grid-column: 1 / 13;
     grid-row: 1 / 4;
   }
@@ -73,7 +175,7 @@ main {
   main {
     grid-column: 1 / 13;
     grid-row: 4/ 21;
-  } */
+  }
 }
 
 /* Lg Tablet & Laptop Styles */

@@ -1,4 +1,34 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('modal');
+  const buttons = document.querySelectorAll('button');
+  const closeBtn = document.getElementsByClassName('close')[0];
+  const content = document.querySelectorAll('div.content');
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', function () {
+      modal.style.display = 'block';
+      content.forEach((div) => {
+        div.style.contentVisibility = 'visible';
+      });
+    });
+  });
+
+  closeBtn.addEventListener('click', function () {
+    modal.style.display = 'none';
+    content.forEach((div) => {
+      div.style.contentVisibility = 'hidden';
+    });
+  });
+
+  window.addEventListener('click', function (event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+      content.forEach((div) => {
+        div.style.contentVisibility = 'hidden';
+      });
+    }
+  });
+
   const collapseButtons = document.querySelectorAll('.collapse');
   collapseButtons.forEach((button) => {
     button.addEventListener('click', function () {
