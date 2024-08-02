@@ -83,7 +83,7 @@ h1 {
 button {
   border: none;
   cursor: pointer;
-  font-size: clamp(15px, 4vw, 70px);
+  font-size: clamp(15px, 4vw, 60px);
   color: var(--main-navy);
   background-color: var(--main-cream);
   padding: 5vw;
@@ -221,4 +221,8 @@ div#modal-body {
 
 /* Desktop Styles */
 @media screen and (min-width: 960px) {
+  button {
+    width: 30vw;
+    padding: 2vw;
+  }
 }
