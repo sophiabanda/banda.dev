@@ -15,6 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
       // Load the targeted content into the modal body
       modalBody.innerHTML = targetContent;
 
+      // Apply styles to the work section if it exists
+      if (targetId === 'work') {
+        modalBody.classList.add('scrollable-section');
+      } else {
+        modalBody.classList.remove('scrollable-section');
+      }
+
       // Only show the modal if there is content to display
       if (modalBody.innerHTML.trim() !== '') {
         modal.style.display = 'flex';
