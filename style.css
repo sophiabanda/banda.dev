@@ -16,16 +16,14 @@
 * {
   font-family: 'Victor Mono';
   font-weight: 600;
-}
-
-body,
-p,
-a,
-h3,
-h1 {
   margin: 0;
   padding: 0;
   text-decoration: none;
+}
+
+body,
+html {
+  height: 100%;
 }
 
 a,
@@ -99,14 +97,11 @@ main {
   text-align: center;
   width: 83vw;
   padding-top: 150px;
-}
-
-article {
   margin-bottom: 75px;
   margin-top: 50px;
 }
 
-article div {
+section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,7 +137,7 @@ button:hover {
 }
 
 /* ---------------------------------------------------------- SECTIONS */
-section {
+section div {
   display: flex;
   flex-direction: column;
   color: var(--main-navy);
@@ -186,10 +181,10 @@ section {
   margin-bottom: 10px;
 }
 
-#contact,
-#work,
-#about,
-#resume {
+#contact-section,
+#work-section,
+#about-section,
+#resume-section {
   flex-direction: column;
   align-items: center;
 }
@@ -219,7 +214,6 @@ section {
   border-radius: var(--border-radius);
 }
 
-small,
 p {
   font-size: clamp(10px, 2vw, 15px);
 }
