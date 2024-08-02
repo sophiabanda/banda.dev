@@ -1,45 +1,33 @@
 document.addEventListener('DOMContentLoaded', function () {
   const modal = document.getElementById('modal');
-  const buttons = document.querySelectorAll('button');
+  const modalBody = document.getElementById('modal-body');
+  const buttons = document.querySelectorAll('button[data-target]');
   const closeBtn = document.getElementsByClassName('close')[0];
-  const content = document.querySelectorAll('div.content');
 
   buttons.forEach((button) => {
     button.addEventListener('click', function () {
+      const targetId = this.getAttribute('data-target');
+      const targetContent = document.getElementById(targetId).innerHTML;
+
+      // Clear the modal body before appending new content
+      modalBody.innerHTML = '';
+
+      // Load the targeted content into the modal body
+      modalBody.innerHTML = targetContent;
+
+      // Show the modal
       modal.style.display = 'block';
-      content.forEach((div) => {
-        div.style.contentVisibility = 'visible';
-      });
     });
   });
 
   closeBtn.addEventListener('click', function () {
     modal.style.display = 'none';
-    content.forEach((div) => {
-      div.style.contentVisibility = 'hidden';
-    });
   });
 
   window.addEventListener('click', function (event) {
     if (event.target == modal) {
       modal.style.display = 'none';
-      content.forEach((div) => {
-        div.style.contentVisibility = 'hidden';
-      });
     }
-  });
-
-  const collapseButtons = document.querySelectorAll('.collapse');
-  collapseButtons.forEach((button) => {
-    button.addEventListener('click', function () {
-      this.classList.toggle('active');
-      let content = this.nextElementSibling;
-      if (content.classList.contains('expanded')) {
-        content.classList.remove('expanded');
-      } else {
-        content.classList.add('expanded');
-      }
-    });
   });
 });
 

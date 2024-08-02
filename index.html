@@ -19,39 +19,35 @@
     </header>
     <main>
         <section>
-            <button class="collapse">About +</button>
-            <div id="modal" class="modal">
-                <div class="content">
-                    <span class="close">&times;</span>
-                    <p>
-                        From a young age, I have loved taking things apart
-                        to
-                        see how they work. In adulthood, this became a great
-                        ability to troubleshoot and solve a variety of
-                        problems.
-                    </p>
-                    <p>
-                        I pivoted from fitness and retail management into
-                        the
-                        world of tech in 2018. I have utilized my unique set
-                        of
-                        skills to work across Customer Success, Product
-                        Management, Technical Support, and Web Development
-                        teams. I am seamlessly agile and endlessly curious.
-                    </p>
-                    <p>
-                        I find myself happiest at the intersection of
-                        troubleshooting and client happiness, and enjoy
-                        delivering
-                        elegant solutions to complex problems.
-                    </p>
-                </div>
+            <button data-target="about" class="collapse">About +</button>
+            <div class="content" id="about">
+                <p>
+                    From a young age, I have loved taking things apart
+                    to
+                    see how they work. In adulthood, this became a great
+                    ability to troubleshoot and solve a variety of
+                    problems.
+                </p>
+                <p>
+                    I pivoted from fitness and retail management into
+                    the
+                    world of tech in 2018. I have utilized my unique set
+                    of
+                    skills to work across Customer Success, Product
+                    Management, Technical Support, and Web Development
+                    teams. I am seamlessly agile and endlessly curious.
+                </p>
+                <p>
+                    I find myself happiest at the intersection of
+                    troubleshooting and client happiness, and enjoy
+                    delivering
+                    elegant solutions to complex problems.
+                </p>
             </div>
         </section>
         <section>
-            <button class="collapse">Work +</button>
-            <div class="content">
-                <span class="close">&times;</span>
+            <button data-target="work" class="collapse">Work +</button>
+            <div class="content" id="work">
                 <div>
                     <h3>Memory Lotería</h3>
                     <img src="assets/work-images/loteria.png"
@@ -120,11 +116,11 @@
                         paper.</p>
                 </div>
             </div>
+
         </section>
         <section>
-            <button class="collapse">Resume +</button>
-            <div class="content">
-                <span class="close">&times;</span>
+            <button data-target="resume" class="collapse">Resume +</button>
+            <div class="content" id="resume">
                 <a href="/resume.html" target="_blank">Click here to
                     view</a>
                 <a href="assets/resume/SB Resume.pdf" download="">Click here
@@ -133,9 +129,8 @@
             </div>
         </section>
         <section>
-            <button class="collapse">Contact +</button>
-            <div class="content">
-                <span class="close">&times;</span>
+            <button data-target="contact" class="collapse">Contact +</button>
+            <div class="content" id="contact">
                 <a href="https://github.com/sophiabanda"
                     target="_blank">Github</a>
                 <a href="https://www.linkedin.com/in/sophia-banda/"
@@ -146,6 +141,12 @@
             </div>
         </section>
     </main>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
 </body>
 
 </html>
