@@ -35,16 +35,23 @@ a:visited {
 
 body,
 html {
-  /* height: 100vh; */
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
   overflow-y: auto;
   background-color: var(--main-navy);
   color: var(--main-cream);
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+}
+
+body {
+  padding-left: 25vw;
+}
+
+#resume-container {
+  padding-left: 0;
 }
 
 /* ----------------------------------------------------------- NAV / HEADER */
@@ -56,7 +63,7 @@ header {
   position: fixed;
   left: 0;
   top: 0;
-  width: 20vw;
+  width: 25vw;
   z-index: 1000;
   background-color: var(--main-green);
   text-shadow: 0.5px 0.5px var(--main-navy);
@@ -112,9 +119,9 @@ article div {
 button {
   border: none;
   cursor: pointer;
-  width: 600px;
+  width: 60vw;
   height: 100px;
-  font-size: 20px;
+  font-size: clamp(15px, 4vw, 70px);
   color: var(--main-navy);
   background-color: var(--main-cream);
   padding: 18px;
@@ -124,7 +131,7 @@ button {
 
 .collapse {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 60vw;
   display: block;
   outline: none;
   border: none;
@@ -142,7 +149,7 @@ section {
   color: var(--main-navy);
   background-color: var(--main-cream);
   text-align: center;
-  width: 250px;
+  width: 25vw;
   border-radius: var(--border-radius);
   margin-top: 5px;
   margin-bottom: 15px;
@@ -155,24 +162,24 @@ section {
   transition: max-height 0.5s ease, padding 0.5s ease;
   max-height: 0;
   width: 100%;
-  max-width: 600px;
+  max-width: 60vw;
   box-sizing: border-box;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 8vw;
+  padding-right: 8vw;
   content-visibility: hidden;
 }
 
 .content.expanded {
   max-height: 1000px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 8vw;
+  padding-bottom: 8vw;
   content-visibility: visible;
 }
 
 .content a {
   color: var(--main-navy);
-  width: 70%;
-  height: 25px;
+  width: 20vw;
+  height: auto;
   padding: 10px;
   box-shadow: 2px 2px var(--main-orange);
   background-color: var(--main-yellow);
@@ -189,8 +196,8 @@ section {
 }
 
 #work {
-  overflow: scroll;
-  max-height: 500px;
+  overflow-y: scroll;
+  max-height: 75vh;
   scroll-snap-type: y mandatory;
 }
 
@@ -207,10 +214,15 @@ section {
 }
 
 #work img {
-  max-height: 200px;
-  width: auto;
+  height: 30vh;
+  max-width: 250px;
   border: 2px solid var(--main-navy);
   border-radius: var(--border-radius);
+}
+
+small,
+p {
+  font-size: clamp(10px, 2vw, 15px);
 }
 
 #work small {
@@ -226,7 +238,7 @@ section {
 }
 
 /* ----------------------------------------------------------------- RESUME PAGE */
-#container {
+#resume-container {
   display: flex;
   width: 100%;
   padding-left: 0;
@@ -235,7 +247,7 @@ section {
   text-align: center;
 }
 
-#container div img {
+#resume-container div img {
   max-width: 95%;
   border: 3px solid var(--main-yellow);
 }
