@@ -201,6 +201,33 @@ div#modal-body {
   border-radius: var(--border-radius);
 }
 
+/* ------------------------------------------------------- STARS */
+.star {
+  position: fixed;
+  pointer-events: none;
+}
+
+.star:before,
+.star:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '\2726';
+  font-size: 12px;
+}
+
+.star:before {
+  color: transparent;
+  text-shadow: 0 0 3px rgb(252, 252, 219);
+}
+
+.star:after {
+  background: rgb(252, 252, 176);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* --------------------------------------------------------- MEDIA QUERIES */
 /* Small Tablet Styles */
 @media screen and (max-width: 759px) {
