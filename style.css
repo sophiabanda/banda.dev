@@ -297,4 +297,8 @@ div#modal-body {
     width: 70vw;
     height: 12vh;
   }
+
+  .modal-content {
+    width: 90vw;
+  }
 }
