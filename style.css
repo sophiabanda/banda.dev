@@ -32,6 +32,7 @@ body {
   margin: 0;
   padding: 0;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 a,
@@ -143,7 +144,9 @@ button:hover {
 }
 
 .scrollable-section > div {
-  display: flex;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -161,7 +164,9 @@ button:hover {
 }
 
 .modal-content {
-  display: flex;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -191,7 +196,9 @@ div#modal-body {
   overflow-y: auto;
   scroll-snap-type: y mandatory;
   padding: 15px;
-  display: flex;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
   flex-direction: column;
 }
 
@@ -250,7 +257,9 @@ div#modal-body {
   header {
     grid-column: 1 / 13;
     grid-row: 1 / 5;
-    display: flex;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
     flex-direction: row;
     align-items: center;
   }
