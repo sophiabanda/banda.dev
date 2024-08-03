@@ -160,6 +160,7 @@ button:hover {
 /* --------------------------------------------------------- SECTIONS */
 .content {
   content-visibility: hidden;
+  display: none;
   margin: auto;
 }
 
