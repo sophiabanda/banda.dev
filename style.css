@@ -274,9 +274,10 @@ div#modal-body {
 /* Mobile Styles */
 @media screen and (max-width: 380px) {
   main {
-    padding: 15vh;
+    padding: 10vh;
   }
   button {
-    width: 50vw;
+    width: 70vw;
+    height: 12vh;
   }
 }
