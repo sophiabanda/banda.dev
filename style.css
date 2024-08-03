@@ -94,12 +94,13 @@ main {
 button {
   border: none;
   cursor: pointer;
+  width: 30vw;
   font-size: clamp(15px, 4vw, 60px);
   color: var(--main-navy);
   background-color: var(--main-cream);
-  padding: 5vw;
   box-shadow: 5px 5px var(--main-orange);
   border-radius: var(--border-radius);
+  padding: 3vw;
 }
 
 button:hover {
@@ -234,6 +235,9 @@ div#modal-body {
   button {
     width: 30vw;
     padding: 2vw;
+  }
+  main {
+    padding: 10vh;
   }
 }
 
