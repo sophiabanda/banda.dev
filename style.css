@@ -78,7 +78,8 @@ header img {
   max-height: 30vh;
 }
 
-h1 {
+h1,
+h2 {
   font-size: 4vw;
   margin-left: 15px;
   margin-top: 15px;
