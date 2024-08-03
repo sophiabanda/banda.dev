@@ -91,7 +91,8 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 2vw;
+  gap: 3vw;
+  padding: 10vw;
 }
 
 /* -------------------------------------------------------- BUTTON HEADERS */
@@ -243,17 +244,15 @@ div#modal-body {
 /* --------------------------------------------------------- MEDIA QUERIES */
 /* Desktop Styles */
 @media screen and (min-width: 960px) {
-  button {
-    width: 30vw;
-    padding: 2vw;
-  }
-  main {
-    padding: 10vh;
-  }
 }
 
 /* Lg Tablet & Laptop Styles */
 @media screen and (min-width: 760px) and (max-width: 959px) {
+  main {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    grid-template-columns: none;
+  }
 }
 
 /* Small Tablet Styles */
@@ -280,19 +279,15 @@ div#modal-body {
     grid-column: 1 / 13;
     grid-row: 6/ 21;
     grid-template-columns: none;
-    padding: 10vh;
-  }
-
-  button {
-    width: 50vw;
   }
 }
 
 /* Mobile Styles */
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 552px) {
   main {
     padding: 10vh;
   }
+
   button {
     width: 70vw;
     height: 12vh;
