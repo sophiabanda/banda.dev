@@ -114,6 +114,7 @@ button {
 
 button:hover {
   background-color: var(--main-yellow);
+  animation-name: grow;
 }
 
 /* --------------------------------------------------------- MODAL */
@@ -269,6 +270,7 @@ div#modal-body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 
   h1 {
