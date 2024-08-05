@@ -213,7 +213,6 @@ div#modal-body {
 
 .modal img {
   height: 30vh;
-  max-width: 250px;
   border: 2px solid var(--main-navy);
   border-radius: var(--border-radius);
 }
