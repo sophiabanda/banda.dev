@@ -107,13 +107,17 @@ button {
   color: var(--main-navy);
   background-color: var(--main-cream);
   box-shadow: 5px 5px var(--main-orange);
+  -moz-box-shadow: 5px 5px var(--main-orange);
+  -webkit-box-shadow: 5px 5px var(--main-orange);
   border-radius: var(--border-radius);
   padding: 3vw;
 }
 
 button:hover {
   background-color: var(--main-yellow);
-  transform: rotate(20deg);
+  /* transform: rotate(20deg); */
+  /* rotate effect broke in firefox after recent update */
+  transform: scale(1.1);
 }
 
 /* --------------------------------------------------------- MODAL */
