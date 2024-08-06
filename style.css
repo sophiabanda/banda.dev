@@ -106,9 +106,8 @@ button {
   font-size: clamp(15px, 4vw, 60px);
   color: var(--main-navy);
   background-color: var(--main-cream);
-  box-shadow: 5px 5px var(--main-orange);
-  -moz-box-shadow: 5px 5px var(--main-orange);
-  -webkit-box-shadow: 5px 5px var(--main-orange);
+  box-shadow: 1vw 1vw var(--main-orange);
+
   border-radius: var(--border-radius);
   padding: 3vw;
 }
@@ -116,7 +115,7 @@ button {
 button:hover {
   background-color: var(--main-yellow);
   /* transform: rotate(20deg); */
-  /* rotate effect broke in firefox after recent update */
+  /* ---rotate effect broke in firefox after recent update */
   transform: scale(1.1);
 }
 
@@ -289,6 +288,11 @@ div#modal-body {
     grid-column: 1 / 13;
     grid-row: 6/ 21;
     grid-template-columns: none;
+  }
+
+  button {
+    width: 70vw;
+    height: 12vh;
   }
 }
 
