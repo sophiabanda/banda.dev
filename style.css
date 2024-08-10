@@ -59,6 +59,7 @@ a:visited {
 #resume-container img {
   border: 5px solid var(--main-yellow);
   max-height: 95vh;
+  max-width: 95vw;
 }
 
 /* ----------------------------------------------------------- HEADER */
