@@ -108,9 +108,9 @@ button {
   color: var(--main-navy);
   background-color: var(--main-cream);
   box-shadow: 1vw 1vw var(--main-orange);
-
   border-radius: var(--border-radius);
   padding: 3vw;
+  transition: 1s;
 }
 
 button:hover {
