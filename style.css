@@ -170,6 +170,19 @@ button:hover {
 }
 
 /* --------------------------------------------------------- SECTIONS */
+h3 {
+    margin-top: 20px;
+}
+
+p {
+    font-size: clamp(1.25vh, 1.2px, 30px);
+    margin-bottom: 25px;
+}
+
+div {
+    padding: 5vh;
+}
+
 .content {
     content-visibility: hidden;
     display: none;
@@ -207,26 +220,18 @@ button:hover {
 }
 
 #modal-body a {
-    font-size: clamp(0.7vw, 1vw, 1.75vw);
-}
-
-p {
-    font-size: clamp(1.25vh, 1.2px, 30px);
+    font-size: clamp(1.5vw, 1.75vw, 1.9vw);
 }
 
 div#modal-body {
     max-height: 75vh;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
-    padding: 5vw;
+    padding: 5vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     flex-direction: column;
-}
-
-#modal-body div {
-    margin: 30px 0 30px 0;
 }
 
 .modal img {
@@ -236,6 +241,12 @@ div#modal-body {
     width: auto;
     border: 2px solid var(--main-navy);
     border-radius: var(--border-radius);
+}
+
+#contact-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
 }
 
 /* ------------------------------------------------------- STARS */
