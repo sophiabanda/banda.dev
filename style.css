@@ -162,10 +162,9 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 15px;
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    padding: 15px;
-    gap: 15px;
     border-top: 5px dotted var(--main-orange);
 }
 
@@ -175,12 +174,8 @@ h3 {
 }
 
 p {
-    font-size: clamp(1.25vh, 1.2px, 30px);
+    font-size: 1vw;
     margin-bottom: 25px;
-}
-
-div {
-    padding: 3vw;
 }
 
 .content {
@@ -212,15 +207,15 @@ div {
     max-height: 10vh;
     width: auto;
     height: auto;
-    padding: 10px;
+    /* padding: 10px; */
     box-shadow: 2px 2px var(--main-orange);
     background-color: var(--main-yellow);
     border-radius: var(--border-radius);
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 #modal-body a {
-    font-size: clamp(1.5vw, 1.75vw, 1.9vw);
+    font-size: 0.75vw;
 }
 
 div#modal-body {
@@ -235,8 +230,8 @@ div#modal-body {
 }
 
 .modal img {
-    max-width: 50%;
-    max-height: 50vw;
+    max-width: 30%;
+    max-height: 25vh;
     height: auto;
     width: auto;
     border: 2px solid var(--main-navy);
