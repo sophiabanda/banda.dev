@@ -162,7 +162,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
     scroll-snap-align: start;
     scroll-snap-stop: always;
     border-top: 5px dotted var(--main-orange);
@@ -207,11 +207,9 @@ p {
     max-height: 10vh;
     width: auto;
     height: auto;
-    /* padding: 10px; */
     box-shadow: 2px 2px var(--main-orange);
     background-color: var(--main-yellow);
     border-radius: var(--border-radius);
-    /* margin-bottom: 10px; */
 }
 
 #modal-body a {
