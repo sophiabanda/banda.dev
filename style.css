@@ -81,8 +81,7 @@ header img {
 h1,
 h2 {
     font-size: 4vw;
-    margin-left: 15px;
-    margin-top: 15px;
+    margin: 15px 0 0 15px;
     text-shadow: 3px 3px var(--main-navy);
 }
 
@@ -115,9 +114,6 @@ button {
 
 button:hover {
     background-color: var(--main-yellow);
-    /* transform: rotate(20deg); */
-    /* ---rotate effect broke in firefox after recent update */
-    transform: scale(1.1);
 }
 
 /* --------------------------------------------------------- MODAL */
@@ -156,8 +152,6 @@ button:hover {
 }
 
 .scrollable-section > div {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -185,8 +179,6 @@ p {
 }
 
 .modal-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -202,17 +194,10 @@ p {
 }
 
 #modal-body a {
-    color: var(--main-navy);
     max-width: 15vw;
     max-height: 10vh;
     width: auto;
     height: auto;
-    box-shadow: 2px 2px var(--main-orange);
-    background-color: var(--main-yellow);
-    border-radius: var(--border-radius);
-}
-
-#modal-body a {
     font-size: 0.75vw;
 }
 
@@ -221,8 +206,6 @@ div#modal-body {
     overflow-y: auto;
     scroll-snap-type: y mandatory;
     padding: 5vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
 }
@@ -265,14 +248,9 @@ div#modal-body {
 .star:after {
     background: rgb(252, 252, 176);
     background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 /* --------------------------------------------------------- MEDIA QUERIES */
-/* Desktop Styles */
-@media screen and (min-width: 960px) {
-}
 
 /* Lg Tablet & Laptop Styles */
 @media screen and (min-width: 760px) and (max-width: 959px) {
@@ -288,8 +266,6 @@ div#modal-body {
     header {
         grid-column: 1 / 13;
         grid-row: 1 / 6;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -307,7 +283,6 @@ div#modal-body {
     }
 
     main {
-        grid-column: 1 / 13;
         grid-row: 6/ 21;
         grid-template-columns: none;
     }
@@ -322,11 +297,6 @@ div#modal-body {
 @media screen and (max-width: 552px) {
     main {
         padding: 10vh;
-    }
-
-    button {
-        width: 70vw;
-        height: 12vh;
     }
 
     .modal-content {
