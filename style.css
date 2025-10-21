@@ -252,6 +252,8 @@ div#modal-body {
 
 /* --------------------------------------------------------- MEDIA QUERIES */
 
+/* --------------------------------------------------------- RESPONSIVE STYLES */
+
 /* Lg Tablet & Laptop Styles */
 @media screen and (min-width: 760px) and (max-width: 959px) {
     main {
@@ -261,7 +263,7 @@ div#modal-body {
     }
 }
 
-/* Small Tablet Styles */
+/* Small Tablet & Mobile Styles */
 @media screen and (max-width: 759px) {
     header {
         grid-column: 1 / 13;
@@ -283,20 +285,15 @@ div#modal-body {
     }
 
     main {
-        grid-row: 6/ 21;
+        grid-column: 1 / 13;
+        grid-row: 6 / 21;
         grid-template-columns: none;
+        padding: 10vh;
     }
 
     button {
         width: 70vw;
         height: 12vh;
-    }
-}
-
-/* Mobile Styles */
-@media screen and (max-width: 552px) {
-    main {
-        padding: 10vh;
     }
 
     .modal-content {
